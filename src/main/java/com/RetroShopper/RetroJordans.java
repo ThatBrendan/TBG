@@ -1,11 +1,7 @@
 package com.RetroShopper;
 
 public class RetroJordans {
-    ///////(ATTRIBUTES)//////////
+   public static void Sneakers(){
 
-
-    //////(CONSTRUCTORS)///////
-
-
-    ////////(METHODS)/////////
+   }
 }
