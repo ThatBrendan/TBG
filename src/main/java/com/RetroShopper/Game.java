@@ -9,8 +9,6 @@ public class Game {
     private Location location;
 
     Scanner myObj = new Scanner(System.in);
-    JordanLocation jordanLocation = new JordanLocation();
-
 
     public Game(Player player1) {
         location = new Location();
@@ -18,9 +16,9 @@ public class Game {
         player = player1;
     }
 
-    public <inputControl> void gameRun(inputControl){
+    public void gameRun(InputSetUp inputSetUp){
         System.out.println("Welcome to Arndale shopping plaza. Within these stores lies one retro Jordan.\n" +
-                "It is all yours if you're able to find it. Goodluck in your adventure!!!");
+                "It is all yours if you can find it. Goodluck in your adventure!!!");
 
 
         while (seeksJordans == true){
@@ -30,7 +28,7 @@ public class Game {
             System.out.println("You have chosen to go" + userInput);
 
 
-            switch (inputControl.nextLine()) {
+            switch (inputSetUp.nextLine()) {
                 case "Up":
                     player.moveForward(location);
                     break;
@@ -52,7 +50,7 @@ public class Game {
                     break;
             }
 
-            if (location.getTiles()[player.getPlayerPosX()][player.getPlayerPosY()].getClass() == JordanLocation){
+            if (location.getTiles()[player.getPlayerPosX()][player.getPlayerPosY()].getClass() == JordanLocation.class){
                 boolean b = seeksJordans == false;
             }
         }
