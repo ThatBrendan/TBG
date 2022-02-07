@@ -9,7 +9,7 @@ public class Game {
     private Location location;
 
     Scanner myObj = new Scanner(System.in);
-    private Class<? extends Tile> JordanLocation;
+    JordanLocation jordanLocation = new JordanLocation();
 
 
     public Game(Player player1) {
@@ -53,12 +53,8 @@ public class Game {
             }
 
             if (location.getTiles()[player.getPlayerPosX()][player.getPlayerPosY()].getClass() == JordanLocation){
-                seeksJordans == false;
+                boolean b = seeksJordans == false;
             }
         }
-    }
-
-    public static void main(String[] args) {
-
     }
 };
